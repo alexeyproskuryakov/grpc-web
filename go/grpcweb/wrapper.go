@@ -118,16 +118,19 @@ func (w *WrappedGrpcServer) ServeHTTP(resp http.ResponseWriter, req *http.Reques
 		if w.websocketOriginFunc(req) {
 			if !w.opts.corsForRegisteredEndpointsOnly || w.isRequestForRegisteredEndpoint(req) {
 				w.HandleGrpcWebsocketRequest(resp, req)
+				grpclog.Infof("Finish serve ws origin. Finished headers: %+v", resp.Header())
 				return
 			}
 		}
 		resp.WriteHeader(http.StatusForbidden)
 		_, _ = resp.Write(make([]byte, 0))
+		grpclog.Infof("Finish serve forbidden. Finished headers: %+v", resp.Header())
 		return
 	}
 
 	if w.IsAcceptableGrpcCorsRequest(req) || w.IsGrpcWebRequest(req) {
 		w.corsWrapper.Handler(http.HandlerFunc(w.HandleGrpcWebRequest)).ServeHTTP(resp, req)
+		grpclog.Infof("Finish serve grpc cors or web. Finished headers: %+v", resp.Header())
 		return
 	}
 	w.handler.ServeHTTP(resp, req)
