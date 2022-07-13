@@ -130,6 +130,7 @@ func (w *WrappedGrpcServer) ServeHTTP(resp http.ResponseWriter, req *http.Reques
 		return
 	}
 	w.handler.ServeHTTP(resp, req)
+	grpclog.Infof("response headers: %+v", resp.Header())
 }
 
 // IsGrpcWebSocketRequest determines if a request is a gRPC-Web request by checking that the "Sec-Websocket-Protocol"
