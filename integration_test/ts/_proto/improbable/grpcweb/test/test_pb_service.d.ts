@@ -3,7 +3,7 @@
 
 import * as improbable_grpcweb_test_test_pb from "../../../improbable/grpcweb/test/test_pb";
 import * as google_protobuf_empty_pb from "google-protobuf/google/protobuf/empty_pb";
-import {grpc} from "@improbable-eng/grpc-web";
+import {grpc} from "@alexeyproskuryakov/grpc-web";
 
 type TestServicePingEmpty = {
   readonly methodName: string;

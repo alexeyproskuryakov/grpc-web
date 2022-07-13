@@ -1,4 +1,4 @@
-import { grpc } from "@improbable-eng/grpc-web";
+import { grpc } from "@alexeyproskuryakov/grpc-web";
 
 export function ReactNativeTransport(init: grpc.XhrTransportInit): grpc.TransportFactory {
   return (opts: grpc.TransportOptions) => {

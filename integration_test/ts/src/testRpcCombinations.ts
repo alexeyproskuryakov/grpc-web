@@ -2,8 +2,8 @@ import {
   testHost,
   corsHost
 } from "../../hosts-config";
-import {grpc} from "@improbable-eng/grpc-web";
-import {NodeHttpTransport} from "@improbable-eng/grpc-web-node-http-transport";
+import {grpc} from "@alexeyproskuryakov/grpc-web";
+import {NodeHttpTransport} from "@alexeyproskuryakov/grpc-web-node-http-transport";
 import { DISABLE_WEBSOCKET_TESTS } from "./util";
 
 type TestConfig = {

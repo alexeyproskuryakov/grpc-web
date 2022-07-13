@@ -2,7 +2,7 @@
 // file: examplecom/library/book_service.proto
 
 import * as examplecom_library_book_service_pb from "../../examplecom/library/book_service_pb";
-import {grpc} from "@improbable-eng/grpc-web";
+import {grpc} from "@alexeyproskuryakov/grpc-web";
 
 type BookServiceGetBook = {
   readonly methodName: string;

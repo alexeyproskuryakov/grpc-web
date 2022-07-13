@@ -3,7 +3,7 @@
 
 var improbable_grpcweb_test_test_pb = require("../../../improbable/grpcweb/test/test_pb");
 var google_protobuf_empty_pb = require("google-protobuf/google/protobuf/empty_pb");
-var grpc = require("@improbable-eng/grpc-web").grpc;
+var grpc = require("@alexeyproskuryakov/grpc-web").grpc;
 
 var TestService = (function () {
   function TestService() {}

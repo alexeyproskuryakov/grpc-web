@@ -20,7 +20,7 @@ The intended use is as a companion process for gRPC server containers.
 ### Pre-built binaries
 
 There are pre-built binaries available for Windows, Mac and Linux (ARM and x86_64):
-https://github.com/improbable-eng/grpc-web/releases
+https://github.com/alexeyproskuryakov/grpc-web/releases
 
 ### Building from source
 
@@ -28,8 +28,8 @@ To build, you need to have Go >= 1.8, and call `go get` with `dep ensure`:
 
 ```sh
 GOPATH=~/go ; export GOPATH
-git clone https://github.com/improbable-eng/grpc-web.git $GOPATH/src/github.com/improbable-eng/grpc-web
-cd $GOPATH/src/github.com/improbable-eng/grpc-web
+git clone https://github.com/alexeyproskuryakov/grpc-web.git $GOPATH/src/github.com/alexeyproskuryakov/grpc-web
+cd $GOPATH/src/github.com/alexeyproskuryakov/grpc-web
 dep ensure # after installing dep
 go install ./go/grpcwebproxy # installs into $GOPATH/bin/grpcwebproxy
 ```

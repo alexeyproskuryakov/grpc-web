@@ -1,7 +1,7 @@
 import {FakeTransportBuilder, frameRequest, TriggerableTransport} from "./index";
 import {PingRequest, PingResponse} from "../../../integration_test/ts/_proto/improbable/grpcweb/test/test_pb";
 import {TestService} from "../../../integration_test/ts/_proto/improbable/grpcweb/test/test_pb_service";
-import {grpc} from "@improbable-eng/grpc-web";
+import {grpc} from "@alexeyproskuryakov/grpc-web";
 
 describe("FakeTransportBuilder", () => {
   describe("stubs", () => {

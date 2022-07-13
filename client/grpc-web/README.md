@@ -1,23 +1,23 @@
-# @improbable-eng/grpc-web
+# @alexeyproskuryakov/grpc-web
 > Library for making gRPC-Web requests from a browser
 
 This library is intended for both JavaScript and TypeScript usage from a web browser or NodeJS (see [Usage with NodeJS](#usage-with-nodejs)).
 
 *Note: This only works if the server supports [gRPC-Web](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-WEB.md)*
 
-A Golang gRPC-Web middleware and a Golang-based gRPC-Web proxy are [available here](https://github.com/improbable-eng/grpc-web).
+A Golang gRPC-Web middleware and a Golang-based gRPC-Web proxy are [available here](https://github.com/alexeyproskuryakov/grpc-web).
 
-Please see the full [gRPC-Web README](https://github.com/improbable-eng/grpc-web) for known limitations.
+Please see the full [gRPC-Web README](https://github.com/alexeyproskuryakov/grpc-web) for known limitations.
 
 ## Installation
 
-`@improbable-eng/grpc-web` has peer dependencies of `google-protobuf` and `@types/google-protobuf`.
+`@alexeyproskuryakov/grpc-web` has peer dependencies of `google-protobuf` and `@types/google-protobuf`.
 
-`npm install google-protobuf @types/google-protobuf @improbable-eng/grpc-web --save`
+`npm install google-protobuf @types/google-protobuf @alexeyproskuryakov/grpc-web --save`
 
 ## Example Project
 
-There is an [example project available here](https://github.com/improbable-eng/grpc-web/tree/master/client/grpc-web-react-example)
+There is an [example project available here](https://github.com/alexeyproskuryakov/grpc-web/tree/master/client/grpc-web-react-example)
 
 ## Usage Overview
 * Use [`ts-protoc-gen`](https://www.npmjs.com/package/ts-protoc-gen) with [`protoc`](https://github.com/google/protobuf) to generate `.js` and `.d.ts` files for your request and response classes. `ts-protoc-gen` can also generate gRPC service definitions with the `service=true` argument.
@@ -25,7 +25,7 @@ There is an [example project available here](https://github.com/improbable-eng/g
 * Make a request using [`unary()`](docs/unary.md), [`invoke()`](docs/invoke.md) or [`client()`](docs/client.md)
 
 ```javascript
-import {grpc} from "@improbable-eng/grpc-web";
+import {grpc} from "@alexeyproskuryakov/grpc-web";
 
 // Import code-generated data structures.
 import {BookService} from "./generated/proto/examplecom/library/book_service_pb_service";
@@ -82,7 +82,7 @@ rpc ListenForBooks(stream QueryBooksRequest) returns (stream Book) {}
 ```
 
 ## Usage with NodeJS
-Refer to [grpc-web-node-http-transport](https://www.npmjs.com/package/@improbable-eng/grpc-web-node-http-transport).
+Refer to [grpc-web-node-http-transport](https://www.npmjs.com/package/@alexeyproskuryakov/grpc-web-node-http-transport).
 
 ## All Docs
 

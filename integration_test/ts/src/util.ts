@@ -2,7 +2,7 @@ import {ContinueStreamRequest} from "../_proto/improbable/grpcweb/test/test_pb";
 import {TestUtilService} from "../_proto/improbable/grpcweb/test/test_pb_service";
 import {
   grpc,
-} from "@improbable-eng/grpc-web";
+} from "@alexeyproskuryakov/grpc-web";
 
 export const DEBUG: boolean = (global as any).DEBUG;
 export const DISABLE_CORS_TESTS: boolean = (global as any).DISABLE_CORS_TESTS;

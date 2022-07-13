@@ -2,7 +2,7 @@
 // file: examplecom/library/book_service.proto
 
 var examplecom_library_book_service_pb = require("../../examplecom/library/book_service_pb");
-var grpc = require("@improbable-eng/grpc-web").grpc;
+var grpc = require("@alexeyproskuryakov/grpc-web").grpc;
 
 var BookService = (function () {
   function BookService() {}

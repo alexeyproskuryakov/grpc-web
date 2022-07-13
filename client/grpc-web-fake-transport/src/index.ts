@@ -1,5 +1,5 @@
 import { Message } from "google-protobuf";
-import { grpc } from "@improbable-eng/grpc-web";
+import { grpc } from "@alexeyproskuryakov/grpc-web";
 import assignIn = require("lodash.assignin");
 
 function frameResponse(request: Message): Uint8Array {

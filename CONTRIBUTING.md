@@ -10,7 +10,7 @@ The following steps guide you through a fresh checkout
 cd ~/Projects/  # or wherever you want your checkout to live
 
 # Checkout project sources
-git clone git@github.com:improbable-eng/grpc-web.git
+git clone git@github.com:alexeyproskuryakov/grpc-web.git
 cd grpc-web
 
 # Install NodeJS dependencies
@@ -53,7 +53,7 @@ These steps assume you have performed all the necessary testing prerequisites. A
 To start the test suite, run:
 
 ```
-cd src/github.com/improbable-eng/grpc-web
+cd src/github.com/alexeyproskuryakov/grpc-web
 npm test
 ```
 

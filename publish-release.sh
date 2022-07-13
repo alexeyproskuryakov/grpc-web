@@ -37,11 +37,11 @@ echo "Publishing $TAG"
 
 # Create github release and attach server binaries
 ./node_modules/.bin/github-release upload \
-  --owner improbable-eng \
+  --owner alexeyproskuryakov \
   --repo grpc-web \
   --tag "$TAG" \
   --name "$TAG" \
-  --body "See [CHANGELOG](https://github.com/improbable-eng/grpc-web/blob/master/CHANGELOG.md) for details" \
+  --body "See [CHANGELOG](https://github.com/alexeyproskuryakov/grpc-web/blob/master/CHANGELOG.md) for details" \
   go/dist/*.zip
 
 # Publish client modules to NPM.
