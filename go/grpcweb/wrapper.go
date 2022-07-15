@@ -114,6 +114,7 @@ func wrapGrpc(options []Option, handler http.Handler, endpointsFunc func() []str
 // You can control the CORS behaviour using `With*` options in the WrapServer function.
 func (w *WrappedGrpcServer) ServeHTTP(resp http.ResponseWriter, req *http.Request) {
 	grpclog.Infof("Serve http response. Initial headers %+v", resp.Header())
+
 	if w.enableWebsockets && w.IsGrpcWebSocketRequest(req) {
 		if w.websocketOriginFunc(req) {
 			if !w.opts.corsForRegisteredEndpointsOnly || w.isRequestForRegisteredEndpoint(req) {
@@ -129,6 +130,7 @@ func (w *WrappedGrpcServer) ServeHTTP(resp http.ResponseWriter, req *http.Reques
 	}
 
 	if w.IsAcceptableGrpcCorsRequest(req) || w.IsGrpcWebRequest(req) {
+		grpclog.Infof("is grpc web request: %v, is acceptable grpc cors request: %v", w.IsGrpcWebRequest(req), w.IsAcceptableGrpcCorsRequest(req))
 		w.corsWrapper.Handler(http.HandlerFunc(w.HandleGrpcWebRequest)).ServeHTTP(resp, req)
 		grpclog.Infof("Finish serve grpc cors or web. Finished headers: %+v", resp.Header())
 		return
